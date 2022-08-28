@@ -5,10 +5,16 @@ function loadUsers2(){
 }
 
 function displayUsers2(data){
-    for(user of data){
-        console.log(user);
-        console.log(user.name);
-        console.log(user.username);
-        console.log(user.email);
+    const ul = document.getElementById('list-item');
+    const ol = document.getElementById('list-item2');
+    for(const user of data){
+        const li = document.createElement('li');
+        li.innerText = user.name
+        ul.appendChild(li);
+
+        const oli = document.createElement('li');
+        oli.innerText = user.phone;
+        ol.appendChild(oli);
+
     }
 }
